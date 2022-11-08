@@ -1,1 +1,17 @@
-<h1>My Tasks</h1>
+<div class='index__wrapper'>
+  <h1>My Tasks</h1>
+
+  <ul class='task__list'>
+    <% @tasks.map do |task|%>
+      <li class="list__style">
+
+          <input class="task__input" type='checkbox' value='check'>
+
+        <a class="task__link" href="/show/<%= task.id %>">
+          <%= task.title %>
+        </a>
+
+      </li>
+    <% end %>
+  </ul>
+</div>

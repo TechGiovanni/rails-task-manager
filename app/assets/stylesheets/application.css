@@ -13,7 +13,46 @@
  *= require_tree .
  *= require_self
  */
+.index__wrapper {
+	width: 500px;
+	margin: 0 auto;
+}
 
 h1 {
-	font-size: 4rem;
+	font-size: 5rem;
+	text-align: center;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+.task__list {
+	list-style-type: none;
+	padding-left: 0;
+	font-size: 2rem;
+	text-align: center;
+}
+
+.list__style {
+	/* border: 1px solid red; */
+	display: flex;
+	gap: 15px;
+	align-items: center;
+	justify-content: flex-start;
+	width: 200px;
+	margin: 0 auto;
+}
+.task__link:link,
+.task__link:visited {
+	color: #555;
+}
+.task__link:hover,
+.task__link:active {
+	color: #777;
+	text-decoration: dotted;
+}
+input[type="checkbox"] {
+	vertical-align: middle;
+	position: relative;
+	bottom: 2px;
 }
