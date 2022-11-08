@@ -10,6 +10,11 @@
     data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
   %>
 
+
+  <a class="task__link" href="<%= @task.id %>/edit">
+    <p>Edit</p>
+  </a>
+
   <hr>
-  <%= link_to 'Go Back', '/' %>
+  <%= link_to "Go Back", tasks_path %>
 </div>
