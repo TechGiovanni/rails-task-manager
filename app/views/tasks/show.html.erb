@@ -1,6 +1,15 @@
-<h1>Show</h1>
+<h2><%= @task.title %></h2>
 
-<%= @task.title %>
-<%= @task.details %>
+<div class="wrapper">
+  <div class="show__desc">
+    <%= @task.details %>
+  </div>
 
-<%= link_to 'Back', '/' %>
+  <%= link_to "Delete",
+    task_path(@task.id),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+  %>
+
+  <hr>
+  <%= link_to 'Go Back', '/' %>
+</div>

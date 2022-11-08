@@ -13,13 +13,13 @@
  *= require_tree .
  *= require_self
  */
-.index__wrapper {
+.wrapper {
 	width: 500px;
 	margin: 0 auto;
 }
 
-h1 {
-	font-size: 5rem;
+h2 {
+	font-size: 4.5rem;
 	text-align: center;
 }
 a {
@@ -40,19 +40,47 @@ a {
 	align-items: center;
 	justify-content: flex-start;
 	width: 200px;
-	margin: 0 auto;
+	margin: 10px auto;
 }
 .task__link:link,
 .task__link:visited {
-	color: #555;
+	color: #444;
 }
 .task__link:hover,
 .task__link:active {
-	color: #777;
-	text-decoration: dotted;
+	color: rgb(75, 89, 129);
+	text-decoration: underline;
 }
 input[type="checkbox"] {
 	vertical-align: middle;
 	position: relative;
 	bottom: 2px;
 }
+
+.delete__link {
+	font-size: 1.5rem;
+}
+
+/* Show page  */
+
+.show__desc {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	background-color: rgba(218, 214, 214, 0.654);
+	border: 1px solid rgb(148, 146, 146);
+	border-radius: 5px;
+	height: 50px;
+	padding: 10px 15px;
+	margin-bottom: 50px;
+}
+
+/* New  */
+/* .new__form {
+	justify-content: flex-start;
+	margin-bottom: 20px;
+}
+
+.new__labels {
+	margin-bottom: 10px;
+} */

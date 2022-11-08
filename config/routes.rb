@@ -5,6 +5,18 @@ Rails.application.routes.draw do
   # root "articles#index"
   # get "/articles", to: "articles#index"
   root to: 'tasks#index', as: :home
-  get 'index', to: 'tasks#index'
-  get 'show/:id', to: 'tasks#show', as: :task
+  # read all
+  get 'tasks', to: 'tasks#index'
+  # create new
+  get 'tasks/new', to: 'tasks#new', as: :new_task
+  post 'tasks', to: 'tasks#create'
+  # read one
+  get 'tasks/:id', to: 'tasks#show', as: :task
+  # update
+  # form to edit the task
+  get 'tasks/:id/edit', to: 'tasks#edit', as: :edit_restaurant
+  # 2. Send the form
+  patch 'tasks/:id', to: 'tasks#update'
+  # delete
+  delete 'tasks/:id', to: 'tasks#destroy'
 end

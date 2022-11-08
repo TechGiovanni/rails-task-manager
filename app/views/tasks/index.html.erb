@@ -1,5 +1,5 @@
-<div class='index__wrapper'>
-  <h1>My Tasks</h1>
+<div class='wrapper'>
+  <h2>My Tasks</h2>
 
   <ul class='task__list'>
     <% @tasks.map do |task|%>
@@ -7,11 +7,27 @@
 
           <input class="task__input" type='checkbox' value='check'>
 
-        <a class="task__link" href="/show/<%= task.id %>">
-          <%= task.title %>
+        <a class="task__link" href="tasks/<%= task.id %>">
+          <%= task.title%>
         </a>
+
+        <%= link_to "Delete",
+          task_path(task.id),
+          data: {
+            turbo_method: :delete,
+            turbo_confirm: "Are you sure?"
+            }
+        %>
 
       </li>
     <% end %>
   </ul>
+
+
+
+  <div class="add__new">
+    <a class="task__link" href="tasks/new">
+      Add a new task
+    </a>
+  </div>
 </div>

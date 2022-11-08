@@ -1,0 +1,17 @@
+<div class="wrapper">
+  <h2>New Task</h2>
+
+  <!-- app/views/restaurants/new.html.erb -->
+  <%= form_with model: @task do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :details %>
+    <%= f.text_area :details, size: "60x10" %>
+    <%= f.submit %>
+  <% end %>
+  <ul>
+    <li><%= link_to "Edit", edit_article_path(@article) %></li>
+  </ul>
+  <hr>
+  <%= link_to 'Go Back', '/' %>
+</div>
